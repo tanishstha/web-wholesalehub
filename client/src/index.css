@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+em {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+
+
+
+/*=====================================
+    BODY HTML CSS DECALARATIONS
+=====================================*/
+/****************GOOD TO HAVES*****************/
+@import '~magnific-popup/dist/magnific-popup.css';
+
+:ROOT {
+    --color-primary: #DD5C2E;
+    --color-secondary: #104A6D;
+    --color-accent: #FFF0D7;
+    --color-white: #ffffff;
+    --color-light-grey: #cacaca;
+    --bg-black: #080707;
+    --bg-grey: #F5F5F5;
+    --bg-white: #fff;
+    --font-primary: "Outfit", sans-serif;
+    /* --font-secondary: "Lora", sans-serif; */
+    --text-primary: #242424;
+    --text-secondary: #666666;
+    --text-light: #888888;
+    --text-white: #ffffff;
+
+    --color-gold: #FFBC42;
+    /* --color-maroon: #A20021; */
+    --color-maroon: #5A0001;
+    --color-logo: #4C5224;
+    
+  }
+
+  [data-theme="dark"] {
+    --color-primary: #DD5C2E;
+    --color-secondary: #104A6D;
+    --color-accent: #FFF0D7;
+    --color-white: #ffffff;
+    --bg-black: #000000;
+    --bg-grey: #F5F5F5;
+    --bg-white: #030315;
+    --font-primary: "Outfit", sans-serif;
+    /* --font-secondary: "Lora", sans-serif; */
+    --text-primary: #ffffff;
+    --text-secondary: #666666;
+    --text-light: #888888;
+    --text-white: #ffffff;
+
+    --color-gold: #FFBC42;
+    /* --color-maroon: #A20021; */
+    --color-maroon: #5A0001;
+    --color-logo: #4C5224;
+  }
+
+  /* // [data-theme="dark"] body {
+  //   background: #333;
+  // } */
+  
+  /* // [data-theme="dark"] body {
+  //   h1,  h2,  h3,  h4,  h5,  h6, a {
+  //     color: var(--text-primary);
+  //   } 
+  // } */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+    letter-spacing: 0.02rem;;
+  }
+  
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 0.5em;
+  }
+  
+  body h1 {
+    font-size: 2.027rem;
+  }
+  body h2 {
+    font-size: 1.802rem;
+  }
+  body h3 {
+    font-size: 1.602rem;
+  }
+  body h4 {
+    font-size: 1.424rem;
+  }
+  body h5 {
+    font-size: 1.266rem;
+  }
+  body h6 {
+    font-size: 1.125rem;
+  }
+  body p, body li, body button, body div {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  
+
+  body small {
+    font-size: 0.833rem;
+  }
+  
+  .dark_text {
+    color: #363636;
+  }
+
+  button {
+    font-family: var(--font-primary);
+    cursor: pointer;
+  }
+  
+  .btn__main {
+    padding: 20px 30px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    background: var(--color-primary);
+    border: none;
+    border-radius: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;;
+    cursor: pointer;
+  }
+  .btn__main:hover {
+    opacity: 0.8;
+  }
+  
+  .btn__secondary {
+    padding: 20px 30px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    background: var(--bg-grey);
+    border: none;
+    border-radius: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;;
+    cursor: pointer;
+
+  }
+  .btn__links:hover {
+    opacity: 0.8;
+  }
+
+  .btn__light {
+    padding: 20px 30px;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    background: var(--bg-white);
+    border: 1px solid var(--color-primary);
+    border-radius: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;;
+    cursor: pointer;
+
+
+  }
+
+  .btn__light:hover {
+    background: var(--bg-grey);
+  }
+  
+  .btn__links__white {
+    padding: 10px 18px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    background: var(--bg-white);
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+  }
+  .btn__links__white:hover {
+    opacity: 0.8;
+  }
+  
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .section__padding {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--text-primary);
+  }
+
+  .text__center {
+    text-align: center;
+  }
+
+  .w-70 {width: 70%; margin: auto;}
+  .w-80 {width: 80%; margin: auto;}
+  .w-90 {width: 90%; margin: auto;}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;;
+}
+
+.not__found {
+  width: 70%;
+  margin: 200px auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.spacer {
+  height: 86.9px;
+}
+
+button {
+  cursor: pointer;
+}
+
+[data-theme="dark"] .table__header th,
+[data-theme="dark"] .form__grp label
+{
+  color: #333; 
+}
+
+
+[data-theme="dark"] .nav__single.sub__nav a,
+[data-theme="dark"] .nav__single.sub__nav button {
+  color: #333;
+}

@@ -1,0 +1,197 @@
+.section__checkout {
+  display: grid;
+  // grid-template-columns: 50% 50%;
+  gap: 30px;
+
+  // .items_left {
+  //     form {
+  //         .form__grp {
+  //             label , input {
+  //                 font-size: 1rem;
+  //                 color: #333;
+  //             }
+  //         }
+  //     }
+  // }
+
+  .items__right {
+    .cart__table {
+      .table__header,
+      .table__elements {
+        display: grid;
+        grid-template-columns: 20% 40% 20% 20%;
+        border-bottom: 1px solid var(--text-secondary);
+      }
+    }
+  }
+}
+
+.section__checkout .form__payment__bottom {
+  width: 100%;
+  h6 {
+    width: 100%;
+    color: #333;
+  }
+  .form__layout {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    gap: 10px;
+    h6 {
+      width: 100%;
+      color: #333;
+    }
+  }
+  .form__grp {
+    width: 100%;
+
+    background: var(--text-white);
+    padding: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    input {
+      border-radius: 2px;
+    }
+    .radio_btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 40%;
+      gap: 5px;
+
+      label {
+        margin-bottom: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.shipping__form.form__layout {
+  .form__grp {
+    div.error {
+      color: #333;
+    }
+  }
+}
+
+.section__checkout {
+  .form__payment__bottom {
+    margin-top: 2rem;
+    .form__grp {
+      input {
+        border-radius: 2px;
+      }
+    }
+    .form__layout {
+      h6 {
+        color: #333;
+      }
+    }
+  }
+
+  .shipping__form {
+    button.btn__main {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+  .submit {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+///////////////////Santoshhhh
+
+.checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 52px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  .checkout-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    .form-sections {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .form-section {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #333;
+      display: block;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      width: 5%;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    select {
+      height: 40px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    p {
+      color: #dc3545;
+      font-size: 0.875rem;
+    }
+  }
+}

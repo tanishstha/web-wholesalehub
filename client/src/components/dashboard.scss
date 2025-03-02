@@ -1,0 +1,252 @@
+.dashboard tr.table__header, 
+.dashboard tr.table__elements {
+    display: grid;
+    grid-template-columns: 15% 25% 20% 20% 20% ;   
+}
+
+.dashboard td.addtoCart {
+    button {
+        border: none;
+        background: none;
+        padding: 5px;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+//styles for addressc cards
+.shipping__cards {
+    // margin-top: 2rem;
+    .shipping__info {
+        display: flex;
+        gap: 2rem;
+
+        .card__single__shipping__address {
+            min-width: 250px;;
+            padding: 1rem 2rem;
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.31);
+            box-shadow: 0 4px 11px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(4.7px);
+            -webkit-backdrop-filter: blur(4.7px);
+            position: relative;
+
+            &.active {
+                border: 1px solid green;
+                transition: all 0.2s ease-in-out;
+                .checkmark {
+                    visibility: visible;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+
+            p {
+                margin-bottom: 0.2rem;
+            }
+
+            p.userName {
+                font-weight: 500;
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 0.6rem;
+                right: 0.6rem;
+                z-index: 1;
+                visibility: hidden;;
+                transition: all 0.2s ease-in-out;
+
+
+                svg {
+                    fill: green;
+                }
+            }
+        }
+    }
+}
+
+
+//styles for collapsible componenets view
+.dashboard {
+    .tab__parent {
+        margin-top: 2rem;
+        display: grid;
+        gap: 60px;
+        grid-template-columns: 20% 80%;
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            // border: 1px solid var(--text-secondary);
+            height: auto;
+
+            button {
+                border: none;
+                background: none;
+                display: flex;
+                align-items: center;
+                color: var(--text-primary);
+                text-align: left;
+                padding: 1rem 1rem;
+                // margin-top: 1rem;
+                font-size: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px dashed var(--color-light-grey);
+                }
+                border-bottom: 1px solid var(--color-light-grey);
+                border-left: 1px solid var(--color-light-grey);;
+                border-right: 1px solid var(--color-light-grey);;
+                
+                &:first-child {
+                    border-top: 1px solid var(--color-light-grey);
+                    border-top-right-radius: 3px;;
+                    border-top-left-radius: 3px;;
+
+
+                }
+
+                &:last-child {
+                    border-bottom-right-radius: 3px;;
+                    border-bottom-left-radius: 3px;;
+                }
+                &:hover {
+                    color: var(-color-primary);
+                }
+
+                svg {
+                    margin-right: 0.2rem;
+                    margin-left: auto;
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        .tab-content {
+            position: relative;
+            .btn__add__address {
+                margin-top: 3rem;
+            }
+            .add_address_form {
+                margin-top: 3rem;
+            }
+
+            .hr_line {
+                position: absolute;
+                left: -30px;
+                top: 0 ;
+                height: 100%;
+                width: 1px;
+                background: var(--text-light);
+            }
+        }
+    }
+}
+
+
+.add__address__form {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .submit__button {
+        width: 100%;;
+    }
+
+    .form__grp {
+        width: calc(38% - 30px);
+        display: flex;
+        flex-direction: column;
+        // margin-bottom: 1rem;
+        label {
+            min-width: 100px;;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px 10px ;
+            border-radius: 5px;
+            border: 1px solid var(--color-primary);
+
+            &:active {
+                border: 1px solid var(--color-primary);
+            }
+        }
+    }
+}
+
+//styles for histoy
+.history__card__header {
+    display: grid;
+    grid-template-columns: 10% 30% 20% 20% 20%;
+    margin-bottom: 1rem;
+    
+    p {
+        font-weight: 500;
+        background: rgba(179, 179, 179, 0.2);
+        padding: 10px;
+        // text-align: center;
+        // border-right: 1px solid var(--text-light);
+        // border-top: 1px solid var(--text-light);
+        // border-bottom: 1px solid var(--text-light);
+        
+        &:first-child {
+            // border-left: 1px solid var(--text-light);
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        &:last-child {
+            // border-left: 1px solid var(--text-light);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+}
+.history__card__single {
+    display: grid;
+    grid-template-columns: 10% 30% 20% 20% 20%;
+    margin-bottom: 1rem;
+    // padding: 10px;
+    background: rgba(179, 179, 179, 0.2);
+
+    .img__holder {
+        height: 63px;
+        width: 80px;
+        img {
+            height: 100%;
+            width: 100%;;
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    & > p {
+       padding: 10px;
+       display: flex;
+       align-items: center;
+    }
+
+    .status p{
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgb(0, 198, 82);
+        padding: 8px 15px;
+        border-radius: 45px;
+        background: rgb(0, 198, 82 , 0.2);
+
+        svg {
+            margin-left: 0.3rem;
+            color: rgb(0, 198, 82);
+        }
+        ;
+    }
+}
+

@@ -1,0 +1,46 @@
+.hero__section {
+    width: 100%;
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 auto;
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;;
+        .slick-list {
+            .slick-slide img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+    left: 10px; 
+}
+
+.next-slick-arrow {
+    position: absolute;
+    right: 10% !important; 
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.slick-next {
+    right: 5%;
+}
+.slick-prev {
+    left: 5%;
+}
+
+.slick-prev, .slick-next {
+    z-index: 10;
+}
+
+.slick-prev::before, .slick-next::before {
+    background: white;
+    padding: 10px;
+    border-radius: 50%;;
+    color: var(--color-secondary);
+}

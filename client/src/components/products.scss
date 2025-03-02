@@ -1,0 +1,334 @@
+@import 'react-fancybox/lib/fancybox.css';
+
+.products__page__wrapper {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.products__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+
+    &.grid {
+        .single__product .products__card .arrange__colwise p.product__price  {
+            font-size: 1rem;
+            text-align: center !important;
+            margin-top: 0.2rem !important;
+        }
+
+        .single__product .products__card .arrange__colwise {
+            margin-left: 0;
+        }
+    }
+
+    &.full__width {
+        .single__product {
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+            .products__card {
+                display: flex;
+                a {
+                    width: auto;
+                }
+                img {
+                    width: 350px;
+                    max-width: 350px !important;;
+                }
+
+                h6.product__name {
+                    text-align: left;
+                    font-size: 1.4rem;
+                }
+
+                p.product__price {
+                    text-align: left !important;
+                    margin-top: 1.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    
+    .single__product {
+        width: calc(100% / 4 - 10px);
+        transition: all 0.4s ease-in-out;
+        .products__card {
+            margin-bottom: 2rem;
+            img {
+                height: 450px;
+                width: 100%;;
+                object-fit: cover;
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;;
+            }
+
+            h6.product__name {
+                margin-top: 1rem;
+                font-size: 1rem;
+                color: var((--text-primary));
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+            p.product__price {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.loading__screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter__btns__grp {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+
+.filter__menu {
+    background: var(--bg-grey);
+    .label__category__selector {
+        width: 100%;
+        
+    }
+    select#category__select {
+        width: 250px;
+        padding: 10px;
+        margin-top: 0.2rem;
+    }
+    
+    select#sortOptions {
+        padding: 10px;
+        width: 250px;
+        margin-top: 0.2rem;
+    }
+
+    .sort__buttons {
+        display: block;
+        position: relative;
+        margin-top: 2rem;
+
+        .button__sort__title {
+            width: 200px;
+        }
+        .filter__btns__grp {
+            display: flex;
+            gap: 0;
+            flex-direction: column;
+
+            button {
+                padding: 5px 15px;
+            }
+        }
+    }
+}
+
+
+//styles for react modal image 
+/* Add this to your CSS file */
+.modal-image {
+    max-width: 100%; /* Ensures the image doesn't exceed the modal's width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    height: auto; /* Ensures the 
+    container takes up the full height */
+    width: 70%; 
+}
+
+.products__list .single__product .products__card img.__react_modal_image__medium_img {
+    height: 90%;
+    width: auto;;
+}
+
+
+/************** ADJUSTING MAGNIFYING GLASS **************/
+.products__card {
+    position: relative;
+
+    .search__button {
+        position: absolute;
+        z-index:2;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        
+        button {
+            background: none;
+            border: none;
+        }
+        
+        svg {
+            
+            background: rgba(255,255,255,0.5);
+            padding: 5px;
+            border-radius: 50%;
+        }
+    }
+
+    &:hover svg {
+        background: rgba(255,255,255,0.9);
+
+    }
+}
+
+
+.wrapper__buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    .toggle__view {
+
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        .toggle__button {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            min-width: 20px;
+            background: var(--bg-grey);
+            border: 1px solid (--color-accent);
+
+            svg {
+                margin-right: 0.2rem;
+            }
+    
+            &:hover {
+                background: var(--color-accent);
+
+
+            }
+
+            &.active {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.arrange__colwise {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2rem;
+
+    .list__details  {
+        li {
+            color: var(--text-primary);
+            margin-top: 0.2rem;
+        }
+    }
+
+    .product__price {
+        font-size: 1.5rem;
+        text-align: left !important;
+        margin-top: 1rem;
+
+    }
+
+    .avail__colors {
+        margin-top: 1rem;
+    }
+
+    span.color__choice {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .btn__main {
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+.products__list .arrange__colwise .product__price {
+    text-align: center !important;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.btn__load__more.btn__main {
+    display: block;
+    width: 100%;;
+}
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 0;
+    // border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    
+  }
+
+  .products__list .single__product .products__card  
+  .modal-content img
+  
+  {
+    height: 80vh;
+
+  }
+  
+  .zoom-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .modal-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+[data-theme="dark"] .filter__menu{
+    background: none;
+}
